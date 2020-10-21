@@ -1,6 +1,9 @@
 // Including the file system module 
-var fs = require("fs");
-var inquirer = require("inquirer");
+const fs = require("fs");
+// Including the inquirer module 
+const inquirer = require("inquirer");
+// Including the generateMarkdown.js module
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // array of questions for user
 const questions = [
@@ -30,8 +33,15 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+    // Ask user questions
     inquirer.prompt(questions).then(function(response) {
-        console.log(response);
+        // console.log(response);
+        // Use the response to generate markdown text
+        const markdown = generateMarkdown(response);
+        // console.log(markdown);
+
+        // Write the markdown text to a readme file
+        writeToFile("README.md", markdown);
     })
 }
 
