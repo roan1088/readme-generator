@@ -1,4 +1,6 @@
 # Good README Generator
+
+  ![License badge](https://img.shields.io/badge/license-MIT-blue.svg)
   
   ## Description
   Automatically generate a good README for your projects
@@ -18,7 +20,9 @@
   ```
 
   ## Usage
-  Use it wisely
+  Type `node index` into your terminal to begin
+  
+  ![Usage demo](./images/usage-demo.gif)
 
   ## License
   This project is licensed under the MIT license.
